@@ -6,6 +6,8 @@ with inputs;
     srvos.nixosModules.server
   ];
 
+  # environment.systemPackages = with pkgs; [ vim tmux git ];
+
   users.users.ec2-user = {
     isNormalUser = true;
     description = "EC2 user";
