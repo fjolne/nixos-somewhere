@@ -9,4 +9,4 @@ install-arm host hostname:
     --kexec "$(nix build --print-out-paths github:nix-community/nixos-images#packages.aarch64-linux.kexec-installer-nixos-unstable-noninteractive)/nixos-kexec-installer-noninteractive-aarch64-linux.tar.gz"
 
 switch host hostname:
-  nixos-rebuild switch --flake .#{{hostname}} --target-host {{host}} --use-substitutes # --fast --build-host {{host}}
+  nixos-rebuild switch --flake .#{{hostname}} --target-host {{host}} --use-substitutes --fast --build-host {{host}}
